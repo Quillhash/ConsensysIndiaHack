@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://hosted-sip.civic.com/css/civic-modal.min.css">
-    
-    
-      
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDAP - Sign In</title>
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<link rel="stylesheet" href="https://hosted-sip.civic.com/css/civic-modal.min.css">
+
+
+  
 <script src="https://hosted-sip.civic.com/js/civic.sip.min.js"></script>
 <script type="text/javascript">
 // Step 2: Instantiate instance of civic.sip
 var civicSip = new civic.sip({ appId: 'Bkz9vkLXQ' });
 // Step 3: Start scope request.
 var button = document.getElementById('#signupButton');
-  function civicFunction() {
-    civicSip.signup({ style: 'popup', scopeRequest: civicSip.ScopeRequests.BASIC_SIGNUP });
-  };
+function civicFunction() {
+civicSip.signup({ style: 'popup', scopeRequest: civicSip.ScopeRequests.BASIC_SIGNUP });
+};
 
-  // Listen for data
-  civicSip.on('auth-code-received', function (event) {
-    /*
-        event:
-        {
-            event: "scoperequest:auth-code-received",
-            response: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJqdGkiOiI2Y2EwNTEzMi0wYTJmLTQwZjItYTg2Yi03NTkwYmRjYzBmZmUiLCJpYXQiOjE0OTQyMjUxMTkuMTk4LCJleHAiOjE0OTQyMjUyOTkuMTk4LCJpc3MiOiJjaXZpYy1zaXAtaG9zdGVkLXNlcnZpY2UiLCJhdWQiOiJodHRwczovL3BoNHg1ODA4MTUuZXhlY3V0ZS1hcGkudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZGV2Iiwic3ViIjoiY2l2aWMtc2lwLWhvc3RlZC1zZXJ2aWNlIiwiZGF0YSI6eyJjb2RlVG9rZW4iOiJjY2E3NTE1Ni0wNTY2LTRhNjUtYWZkMi1iOTQzNjc1NDY5NGIifX0.gUGzPPI2Av43t1kVg35diCm4VF9RUCF5d4hfQhcSLFvKC69RamVDYHxPvofyyoTlwZZaX5QI7ATiEMcJOjXRYQ",
-            type: "code"
-        }
-    */
+// Listen for data
+civicSip.on('auth-code-received', function (event) {
+/*
+    event:
+    {
+        event: "scoperequest:auth-code-received",
+        response: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJqdGkiOiI2Y2EwNTEzMi0wYTJmLTQwZjItYTg2Yi03NTkwYmRjYzBmZmUiLCJpYXQiOjE0OTQyMjUxMTkuMTk4LCJleHAiOjE0OTQyMjUyOTkuMTk4LCJpc3MiOiJjaXZpYy1zaXAtaG9zdGVkLXNlcnZpY2UiLCJhdWQiOiJodHRwczovL3BoNHg1ODA4MTUuZXhlY3V0ZS1hcGkudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZGV2Iiwic3ViIjoiY2l2aWMtc2lwLWhvc3RlZC1zZXJ2aWNlIiwiZGF0YSI6eyJjb2RlVG9rZW4iOiJjY2E3NTE1Ni0wNTY2LTRhNjUtYWZkMi1iOTQzNjc1NDY5NGIifX0.gUGzPPI2Av43t1kVg35diCm4VF9RUCF5d4hfQhcSLFvKC69RamVDYHxPvofyyoTlwZZaX5QI7ATiEMcJOjXRYQ",
+        type: "code"
+    }
+*/
 
-    // encoded JWT Token is sent to the server
-    var jwtToken = event.response;
-  console.log(jwtToken)
-    // Your function to pass JWT token to your server
-    //sendAuthCode(jwtToken);
-  });
+// encoded JWT Token is sent to the server
+var jwtToken = event.response;
+console.log(jwtToken)
+// Your function to pass JWT token to your server
+//sendAuthCode(jwtToken);
+$.ajax({
+        type: 'POST',
+        beforeSend: function(request) {
+request.setRequestHeader("authorization", jwtToken);
+},
+        
+            contentType: 'application/json',
+                    url: 'http://localhost:3000/login',						
+                    success: function(data) {
+                        console.log('success');
+                        console.log(JSON.stringify(data));
+                    }
+                });
 
-  civicSip.on('user-cancelled', function (event) {
-    /*
-        event:
-        {
-          event: "scoperequest:user-cancelled"
-        }
-    */
-   });
 
-  civicSip.on('read', function (event) {
-    /*
-        event:
-        {
-          event: "scoperequest:read"
-        }
-    */
-  });
+});
 
-   // Error events.
-   civicSip.on('civic-sip-error', function (error) {
-      // handle error display if necessary.
-      console.log('   Error type = ' + error.type);
-      console.log('   Error message = ' + error.message);
-   });
+civicSip.on('user-cancelled', function (event) {
+/*
+    event:
+    {
+      event: "scoperequest:user-cancelled"
+    }
+*/
+});
+
+civicSip.on('read', function (event) {
+/*
+    event:
+    {
+      event: "scoperequest:read"
+    }
+*/
+});
+
+// Error events.
+civicSip.on('civic-sip-error', function (error) {
+  // handle error display if necessary.
+  console.log('   Error type = ' + error.type);
+  console.log('   Error message = ' + error.message);
+});
 </script>
 
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-        <button id="signupButton" class="civic-button-a medium" type="button" onclick="civicFunction()">
-                <span>Log in with Civic</span>
-       </button>
-   
+  <button id="signupButton" class="civic-button-a medium" type="button" onclick="civicFunction()">
+    <span>Log in with Civic</span>
+</button>
+
 </body>
 </html>

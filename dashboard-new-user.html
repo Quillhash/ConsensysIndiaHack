@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDAP - International Digital Assets Platform</title>
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo:600,700|Poppins:200,300,400,500,600,700" rel="stylesheet">
+<link href="css/fontawesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/dashboard.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <div class="logo"><a href="/"><img src="images/idap-logo.svg" alt="IDAP"></a></div>
+  </div>
+  <div class="header-right">
+    <div id="google_translate_element"></div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown dropdown-usermenu"> <a href="javascript:;" class=" dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> <span class="hidden-xs">Neeraj<i class="fa fa-angle-down"></i></span> <span class="visible-xs"><i class="fa fa-user"></i></span></a>
+        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+          <li><a href="reset-password.html"><i class="fa fa-lock"></i> Reset Password</a></li>
+          <li><a href="javascript:;"><i class="fa fa-power-off"></i> Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<div id="ui" class="ui">
+  <!--sidebar start-->
+  <ul class="nav navbar-nav sidebar-trigger hamburger-menu visible-xs">
+	<li><a class="toggle-btn" data-toggle="ui-nav" href=""> <span></span> </a> </li>
+  </ul>
+  <aside id="aside" class="ui-aside">
+  <!--toggle buttons start-->
+  <ul class="nav navbar-nav sidebar-trigger hamburger-menu hidden-xs">
+    <li><a class="toggle-btn" data-toggle="ui-nav" href="javascript:;"> <span></span> </a> </li>
+  </ul>
+  <!-- toggle buttons end -->
+    <ul class="nav ui-nav">
+      <li class="active"><a href="javascript:;"><span class="has-icon"><img src="images/icon-dashboard.svg"></span><span>Dashboard</span></a>
+        <ul class="nav nav-sub sidebar-niceScroll">
+          <li class="nav-sub-header"><a href=""><span>Dashboard</span></a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;"><span class="has-icon"><img src="images/icon-trans-history.svg"></span><span>Transaction History</span></a>
+        <ul class="nav nav-sub sidebar-niceScroll">
+          <li class="nav-sub-header"><a href=""><span>Transaction History</span></a></li>
+        </ul>
+      </li>
+      <li><a href="security.html"><span class="has-icon"><img src="images/icon-security.svg"></span><span>Security</span></a>
+        <ul class="nav nav-sub sidebar-niceScroll">
+          <li class="nav-sub-header"><a href="security.html"><span>Security</span></a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;"><span class="has-icon"><img src="images/icon-sign-out.svg"></span><span>Sign Out</span></a>
+        <ul class="nav nav-sub sidebar-niceScroll">
+          <li class="nav-sub-header"><a href=""><span>Sign Out</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <!--sidebar end-->
+
+  <div id="content" class="ui-content ui-content-aside-overlay">
+    <h1>Dashboard</h1>
+    <div class="ui-content-body">
+      <div class="ui-container container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>Your Balance</h2>
+            <p>Transaction may take up to 24 hours to approve due to our comprehensive verification methods to protect our customers.</p>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="ui-footer">© 2018 BlockCafe, All Rights Reserved</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+
+</script>
+</body>
+</html>
