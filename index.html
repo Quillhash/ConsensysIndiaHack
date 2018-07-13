@@ -32,9 +32,9 @@ var button = document.getElementById('#signupButton');
 
     // encoded JWT Token is sent to the server
     var jwtToken = event.response;
-
+  console.log(jwtToken)
     // Your function to pass JWT token to your server
-    sendAuthCode(jwtToken);
+    //sendAuthCode(jwtToken);
   });
 
   civicSip.on('user-cancelled', function (event) {
